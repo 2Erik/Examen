@@ -1,10 +1,19 @@
 package com.krakedev.examen.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.krakedev.examen.entidades.Vendedor;
 import com.krakedev.examen.entidades.VendedorComision;
 import com.krakedev.examen.entidades.VendedorMixto;
 import com.krakedev.examen.servicios.AdminVentas;
 
+@RestController
+@RequestMapping("/vendedor")
 public class VendedorController {
 	
 	private AdminVentas adminVentas;
@@ -12,8 +21,10 @@ public class VendedorController {
 	public VendedorController() {
 		adminVentas = new AdminVentas();
 	}
-
-	public void agregarVendedor(Vendedor vendedor) {
+	
+	//Metodo agregar vendedor
+	@PostMapping
+	public void agregarVendedor(@RequestBody Vendedor vendedor) {
 
 		Vendedor nuevoVendedor = null;
 
@@ -30,5 +41,11 @@ public class VendedorController {
 		nuevoVendedor.setComisionPorVenta(vendedor.getComisionPorVenta());
 
 		adminVentas.agregar(nuevoVendedor);
+	}
+	
+	//Metodo calcular sueldo vendedor
+	@GetMapping("/{cedula}")
+	public Double calcularSueldoVendedor(@PathVariable String cedula) {
+	    return adminVentas.calcularSueldo(cedula);
 	}
 }
