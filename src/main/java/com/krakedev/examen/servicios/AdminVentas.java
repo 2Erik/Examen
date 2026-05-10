@@ -1,6 +1,8 @@
-package com.krakedev.examen.entidades;
+package com.krakedev.examen.servicios;
 
 import java.util.ArrayList;
+
+import com.krakedev.examen.entidades.Vendedor;
 
 public class AdminVentas {
 	

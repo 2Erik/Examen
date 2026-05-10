@@ -11,11 +11,7 @@ public class Vendedor {
 	public Vendedor(String cedula, String tipo) {
 		super();
 		this.cedula = cedula;
-		if (!tipo.equals("V") && !tipo.equals("C") && !tipo.equals("M")) {
-			System.out.println("Valor incorrecto");
-		}else {
-			this.tipo = tipo;
-		}
+		this.tipo = tipo;
 
 	}
 

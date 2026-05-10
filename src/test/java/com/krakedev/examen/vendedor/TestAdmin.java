@@ -1,9 +1,9 @@
 package com.krakedev.examen.vendedor;
 
-import com.krakedev.examen.entidades.AdminVentas;
 import com.krakedev.examen.entidades.Vendedor;
 import com.krakedev.examen.entidades.VendedorComision;
 import com.krakedev.examen.entidades.VendedorMixto;
+import com.krakedev.examen.servicios.AdminVentas;
 
 public class TestAdmin {
 
