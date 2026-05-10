@@ -11,14 +11,14 @@ public class TestAdmin {
 		// TODO Auto-generated method stub
 		AdminVentas admin = new AdminVentas();
 
-		Vendedor vendedor = new Vendedor("111");
+		Vendedor vendedor = new Vendedor("111", "V");
 		vendedor.setSueldoFijo(800);
 
-		VendedorComision vendedorComision = new VendedorComision("222");
+		VendedorComision vendedorComision = new VendedorComision("222", "C");
 		vendedorComision.setNumeroVentas(10);
 		vendedorComision.setComisionPorVenta(50);
 
-		VendedorMixto vendedorMixto = new VendedorMixto("333");
+		VendedorMixto vendedorMixto = new VendedorMixto("333", "M");
 		vendedorMixto.setSueldoFijo(1000);
 		vendedorMixto.setNumeroVentas(5);
 

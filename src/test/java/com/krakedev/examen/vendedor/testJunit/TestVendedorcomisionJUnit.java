@@ -11,7 +11,7 @@ public class TestVendedorcomisionJUnit {
 	@Test
 	public void testCalcularSueldo() {
 
-		VendedorComision vendedor = new VendedorComision("111111111");
+		VendedorComision vendedor = new VendedorComision("111111111", "V");
 		vendedor.setNumeroVentas(10);
 		vendedor.setComisionPorVenta(50.0);
 

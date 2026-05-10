@@ -5,14 +5,21 @@ public class Vendedor {
 	private int numeroVentas;
 	private double sueldoFijo;
 	private double comisionPorVenta;
-	
-	//Constructor
-	public Vendedor(String cedula) {
+	private String tipo;
+
+	// Constructor
+	public Vendedor(String cedula, String tipo) {
 		super();
 		this.cedula = cedula;
+		if (!tipo.equals("V") && !tipo.equals("C") && !tipo.equals("M")) {
+			System.out.println("Valor incorrecto");
+		}else {
+			this.tipo = tipo;
+		}
+
 	}
-	
-	//Getters and Setters
+
+	// Getters and Setters
 	public String getCedula() {
 		return cedula;
 	}
@@ -44,17 +51,25 @@ public class Vendedor {
 	public void setComisionPorVenta(double comisionPorVenta) {
 		this.comisionPorVenta = comisionPorVenta;
 	}
-	
-	//Metodo toString
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	// Metodo toString
 	@Override
 	public String toString() {
 		return "Vendedor [cedula=" + cedula + ", numeroVentas=" + numeroVentas + ", sueldoFijo=" + sueldoFijo
 				+ ", comisionPorVenta=" + comisionPorVenta + "]";
 	}
-	
-	//Metodo Calcular Sueldo
+
+	// Metodo Calcular Sueldo
 	public double calcularSueldo() {
 		return sueldoFijo;
 	}
-	
+
 }
